@@ -15,3 +15,5 @@ namespace SimpleRPG
         public Dragon(string name, int health, int atk, bool isDead) : base(name, health, atk, isDead) { }
     }
 }
+
+
