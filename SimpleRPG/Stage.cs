@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SimpleRPG
@@ -106,6 +107,8 @@ namespace SimpleRPG
                     else { PrintGoblinStatus(); }
                     PrintPlayerStatus();
 
+                    Thread.Sleep(1000);
+
                     Console.WriteLine($"[{player.Name} 의 턴]\n");
                     Console.WriteLine("1. 공격한다      2. 가만히 있는다");
                     string action = Console.ReadLine();
@@ -134,6 +137,17 @@ namespace SimpleRPG
             //적의 턴
             else
             {
+                Console.Clear();
+
+                Console.WriteLine($"[{monster.Name} 의 턴 진행중...]\n");
+
+                if (isBoss) { PrintWhosStatus(); }
+                else { PrintGoblinStatus(); }
+                PrintPlayerStatus();
+
+
+                Thread.Sleep(600);
+
                 //적은 무조건 공격만 한다.
                 player.TakeDamage(monster.Atk);
 
