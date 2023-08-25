@@ -13,7 +13,6 @@ namespace SimpleRPG
 
     //        - **`use(warrior warrior)`**: 아이템을 사용하는 메서드, 이 메서드는 **`warrior`** 객체를 파라미터로 받습니다.
 
-
     //    - **`iitem`** 인터페이스를 구현하는 **`healthpotion`**과**`strengthpotion`**이라는 두 개의 클래스를 만들어주세요.
     internal interface IItem
     {
@@ -21,6 +20,6 @@ namespace SimpleRPG
         public string Name { get; set; }
 
         //메소드
-        public string Use(Warrior warrior);
+        public void Use(Warrior warrior);
     }
 }

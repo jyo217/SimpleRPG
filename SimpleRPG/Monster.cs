@@ -13,7 +13,7 @@ namespace SimpleRPG
         private int atk;
         private bool isDead;
 
-        Monster(string name, int health, int atk, bool isDead)
+        public Monster(string name, int health, int atk, bool isDead)
         {
             this.name = name;
             this.health = health;

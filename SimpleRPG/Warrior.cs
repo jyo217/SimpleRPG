@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SimpleRPG
 {
-    internal class Warrior : ICharacter
+    public class Warrior : ICharacter
     {
         private string name;
         private int health;
         private int atk;
         private bool isDead;
 
-        Warrior(string name, int health, int atk, bool isDead)
+        public Warrior(string name, int health, int atk, bool isDead)
         {
             this.name = name;
             this.health = health;
@@ -30,7 +30,7 @@ namespace SimpleRPG
         {
             health -= damage;
             
-            if(health <= 0)
+            if (health <= 0)
             {
                 health = 0; isDead = true;
             }

@@ -14,7 +14,6 @@ namespace SimpleRPG
         static void Main(string[] args)
         {
             Stage stage = new Stage();
-
             stage.Start();
         }
     }
