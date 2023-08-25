@@ -23,5 +23,13 @@ namespace SimpleRPG
 {
     internal interface ICharacter
     {
+        //프로퍼티
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public int Atk { get; set; }
+        public bool IsDead { get; set; }
+
+        //메소드
+        public void TakeDamage(int damage);
     }
 }
